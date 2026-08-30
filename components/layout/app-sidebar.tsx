@@ -31,18 +31,13 @@ const mainNavigation = [
     icon: LayoutDashboard,
   },
   {
-    title: "Check In",
-    href: "/check-in",
-    icon: LogIn,
-  },
-  {
     title: "Visitors",
     href: "/visitors",
     icon: Users,
   },
   {
     title: "Visitor Logs",
-    href: "/logs",
+    href: "/visitors-logs",
     icon: ClipboardList,
   },
 ];
@@ -76,9 +71,11 @@ export function AppSidebar({ profile }: AppSidebarProps) {
           href="/dashboard"
           className="flex items-center gap-2 font-semibold"
         >
-          <div className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            V
-          </div>
+          <img
+            src="/logo.png"
+            alt="Visitors Log"
+            className="h-8 w-auto object-contain"
+          />
 
           <span>Visitors Log</span>
         </Link>
@@ -101,7 +98,7 @@ export function AppSidebar({ profile }: AppSidebarProps) {
                 className={cn(
                   "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
                   active
-                    ? "bg-primary text-primary-foreground"
+                    ? "bg-[#0140b2] text-white"
                     : "text-muted-foreground hover:bg-muted hover:text-foreground",
                 )}
               >
@@ -133,7 +130,7 @@ export function AppSidebar({ profile }: AppSidebarProps) {
                     className={cn(
                       "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
                       active
-                        ? "bg-primary text-primary-foreground"
+                        ? "bg-[#0140b2] text-white"
                         : "text-muted-foreground hover:bg-muted hover:text-foreground",
                     )}
                   >

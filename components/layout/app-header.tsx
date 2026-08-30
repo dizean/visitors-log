@@ -91,19 +91,13 @@ export function AppHeader({ profile }: AppHeaderProps) {
               />
 
               <MobileLink
-                href="/check-in"
-                label="Check In"
-                onClick={() => setMobileOpen(false)}
-              />
-
-              <MobileLink
                 href="/visitors"
                 label="Visitors"
                 onClick={() => setMobileOpen(false)}
               />
-
+  
               <MobileLink
-                href="/logs"
+                href="/visitors-logs"
                 label="Visitor Logs"
                 onClick={() => setMobileOpen(false)}
               />
