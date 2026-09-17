@@ -10,7 +10,7 @@ export interface Visitor {
     | "drivers_license"
     | "other"
     | null;
-  id_number: string | null;
+  contact_number: string | null;
   image_path: string | null;
   created_at: string;
   is_inside: boolean;
@@ -46,7 +46,7 @@ export interface IdentifiedVisitor {
     | "drivers_license"
     | "other"
     | null;
-  id_number: string | null;
+  contact_number: string | null;
   image_path: string | null;
   distance: number;
   is_inside: boolean;
@@ -107,7 +107,7 @@ export interface CreateVisitorInput {
     | "drivers_license"
     | "other";
 
-  id_number?: string;
+  contact_number?: string;
   image_path?: string;
   descriptor: number[];
   purpose: string;
@@ -133,8 +133,7 @@ export async function createNewVisitor(
       {
         p_name: input.name,
         p_id_type: input.id_type,
-        p_id_number:
-          input.id_number || null,
+        p_contact_number: input.contact_number || null,
         p_image_path:
           input.image_path || null,
         p_descriptor: vector,

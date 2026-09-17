@@ -34,7 +34,7 @@ function formatIdType(
     );
 }
 
-function maskIdNumber(
+function maskContactNumber(
   value: string | null,
 ) {
   if (!value) {
@@ -91,10 +91,8 @@ export function VisitorMobileList({
 
               <div className="mt-4 grid grid-cols-2 gap-3 rounded-xl bg-muted/40 p-3">
                 <InfoItem
-                  label="ID Number"
-                  value={maskIdNumber(
-                    visitor.id_number,
-                  )}
+                  label="Contact Number"
+                  value={visitor.contact_number || "—"}
                 />
 
                 <InfoItem

@@ -78,7 +78,7 @@ export function VisitorsPage() {
         visitor.id_type
           ?.toLowerCase()
           .includes(query) ||
-        visitor.id_number
+        visitor.contact_number
           ?.toLowerCase()
           .includes(query)
       );

@@ -120,9 +120,7 @@ export function VisitorTable({
                 </p>
 
                 <p className="mt-0.5 text-xs text-muted-foreground">
-                  {maskIdNumber(
-                    visitor.id_number,
-                  )}
+                  {visitor.contact_number}
                 </p>
               </td>
 
