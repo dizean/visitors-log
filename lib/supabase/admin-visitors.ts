@@ -11,7 +11,7 @@ export interface AdminVisitor {
     | "drivers_license"
     | "other"
     | null;
-  id_number: string | null;
+  contact_number: string | null;
   image_path: string | null;
   created_at: string;
   is_inside: boolean;

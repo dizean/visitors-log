@@ -62,8 +62,8 @@ export function VisitorForm({
     visitor?.id_type ?? "",
   );
 
-  const [idNumber, setIdNumber] = useState(
-    visitor?.id_number ?? "",
+  const [contactNumber, setContactNumber] = useState(
+    visitor?.contact_number ?? "",
   );
 
   const [purpose, setPurpose] = useState("");
@@ -144,9 +144,9 @@ export function VisitorForm({
       return;
     }
 
-    if (!idNumber.trim()) {
+    if (!contactNumber.trim()) {
       setError(
-        "Please enter the visitor's ID number.",
+        "Please enter the visitor's contact number.",
       );
       return;
     }
@@ -166,7 +166,7 @@ export function VisitorForm({
             | "drivers_license"
             | "other",
 
-        id_number: idNumber.trim(),
+        contact_number: contactNumber.trim(),
 
         descriptor,
 
@@ -293,19 +293,19 @@ export function VisitorForm({
 
                   <div className="space-y-3">
                     <label
-                      htmlFor="idNumber"
+                      htmlFor="contactNumber"
                       className="text-lg font-semibold sm:text-xl"
                     >
-                      ID Number
+                      Contact Number
                     </label>
 
                     <input
-                      id="idNumber"
-                      value={idNumber}
+                      id="contactNumber"
+                      value={contactNumber}
                       onChange={(event) =>
-                        setIdNumber(event.target.value)
+                        setContactNumber(event.target.value)
                       }
-                      placeholder="Enter ID number"
+                      placeholder="Enter contact number"
                       autoComplete="off"
                       required
                       disabled={submitting}
